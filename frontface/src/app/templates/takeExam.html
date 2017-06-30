@@ -1,0 +1,58 @@
+<body>
+<div class="container">
+
+  <form name="TakeExamForm" ng-submit="SubmitTakeExamForm()">
+<ol>
+    <li ng-repeat="q in questionForExam" >
+      <div class="row">
+        <div class="col-sm-6 col-sm-push-1">
+          <b>Question</b><br>
+      Question: {{q.question}}
+        </div>
+     <div class="col-sm-6 col-sm-push-1">
+      <b>Options</b><br>
+      <div>
+        <div class="radio">
+
+          <input type="radio" name="{{q.id}}" value="opa" ng-model="$parent.selec[$index].option">
+          A: {{q.opa}}<br>
+
+        </div>
+
+        <div class="radio">
+
+          <input type="radio" name="{{q.id}}" value="opb" ng-model="$parent.selec[$index].option">
+          B: {{q.opb}}<br>
+        </div>
+
+        <div class="radio">
+
+          <input type="radio" name="{{q.id}}" value="opc" ng-model="$parent.selec[$index].option">
+          C: {{q.opc}}
+
+        </div>
+      </div>
+     </div>
+
+      <!--{{((selectedoption === q.corr_op) ? '1': '0')}}-->
+      </div>
+      <hr>
+    </li>
+</ol>
+
+    <div class="form-group form-inline">
+      <div class="col-sm-4 col-sm-push-2" align="center">
+        <button type="submit" class="col-sm-6 col-sm-pull-1 btn btn-info-sky">Submit</button>
+      </div>
+      <div class="col-sm-6 col-sm-push-3" align="center">
+        <button type="reset" class="col-sm-6 btn btn-warning ">Reset</button>
+      </div>
+    </div>
+
+  </form>
+
+
+</div>
+</body>
+
+

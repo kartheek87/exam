@@ -1,0 +1,4 @@
+.idea
+target/DBconn.h2.db
+target/DBconn.lock.db
+*.desktop.ini
